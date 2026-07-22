@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareFlow AI Chat</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/chat.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<aside class="sidebar">
+
+<h2>CareFlow</h2>
+
+<ul>
+
+<li><a href="../index.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li class="active"><a href="chat.html"><i class="fa-solid fa-comments"></i> AI Chat</a></li>
+
+<li><a href="create-ticket.html"><i class="fa-solid fa-ticket"></i> Create Ticket</a></li>
+
+<li><a href="my-tickets.html"><i class="fa-solid fa-list"></i> My Tickets</a></li>
+
+<li><a href="ticket-status.html"><i class="fa-solid fa-chart-line"></i> Ticket Status</a></li>
+
+<li><a href="faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+
+</ul>
+
+</aside>
+
+<main class="main">
+
+<div class="chat-header">
+
+<div class="chat-avatar">
+<i class="fa-solid fa-robot"></i>
+</div>
+
+<div>
+<h2>CareFlow AI Assistant</h2>
+
+<span class="status">
+<i class="fa-solid fa-circle"></i>
+Online
+</span>
+
+</div>
+
+</div>
+
+<div class="quick-actions">
+
+<button onclick="quickMessage('Track my order')">Track Order</button>
+
+<button onclick="quickMessage('Create a support ticket')">Create Ticket</button>
+
+<button onclick="quickMessage('Payment issue')">Payment Issue</button>
+
+<button onclick="quickMessage('Refund status')">Refund Status</button>
+
+</div>
+
+<div class="chat-box" id="chatBox">
+
+<div class="message ai">
+
+<div class="avatar">
+<i class="fa-solid fa-robot"></i>
+</div>
+
+<div class="bubble">
+
+<strong>CareFlow AI</strong>
+
+<br><br>
+
+👋 Welcome to CareFlow!
+
+<br><br>
+
+Ask me anything about:
+
+<ul>
+
+<li>📦 Orders</li>
+<li>💳 Payments</li>
+<li>🎫 Tickets</li>
+<li>📄 Refunds</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="typing" id="typing" style="display:none">
+
+<i class="fa-solid fa-robot"></i>
+
+CareFlow AI is typing...
+
+</div>
+
+<div class="chat-input">
+
+<input
+id="message"
+type="text"
+placeholder="Type your message..."
+onkeypress="if(event.key==='Enter') sendMessage();">
+
+<button onclick="sendMessage()">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+</div>
+
+<button class="agent-btn" onclick="transferAgent()">
+
+<i class="fa-solid fa-headset"></i>
+
+Talk to Human Agent
+
+</button>
+
+</main>
+
+</div>
+
+<script src="../js/chat.js"></script>
+
+</body>
+
+</html>

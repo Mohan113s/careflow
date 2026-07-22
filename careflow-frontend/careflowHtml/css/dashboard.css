@@ -1,0 +1,31 @@
+.card1{
+    border-left:6px solid #2563EB;
+}
+
+.card2{
+    border-left:6px solid #F59E0B;
+}
+
+.card3{
+    border-left:6px solid #22C55E;
+}
+
+.card4{
+    border-left:6px solid #8B5CF6;
+}
+
+.card1 .icon{
+    color:#2563EB;
+}
+
+.card2 .icon{
+    color:#F59E0B;
+}
+
+.card3 .icon{
+    color:#22C55E;
+}
+
+.card4 .icon{
+    color:#8B5CF6;
+}

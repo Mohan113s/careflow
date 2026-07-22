@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareFlow CRM</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>CareFlow</h2>
+
+        <ul>
+
+            <li class="active">
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/chat.html">
+                    <i class="fa-solid fa-comments"></i>
+                    AI Chat
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/create-ticket.html">
+                    <i class="fa-solid fa-ticket"></i>
+                    Create Ticket
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/my-tickets.html">
+                    <i class="fa-solid fa-list"></i>
+                    My Tickets
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/ticket-status.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Ticket Status
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/faq.html">
+                    <i class="fa-solid fa-circle-question"></i>
+                    FAQ
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <header>
+
+            <h1>Dashboard</h1>
+
+            <button id="themeBtn">Dark Mode</button>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+
+        <section class="cards">
+
+            <div class="card card1">
+
+                <div class="icon">
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+
+                <h3>Total Tickets</h3>
+
+                <p id="totalTickets">0</p>
+
+            </div>
+
+            <div class="card card2">
+
+                <div class="icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+
+                <h3>Open Tickets</h3>
+
+                <p id="openTickets">0</p>
+
+            </div>
+
+            <div class="card card3">
+
+                <div class="icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <h3>Resolved Tickets</h3>
+
+                <p id="resolvedTickets">0</p>
+
+            </div>
+
+            <div class="card card4">
+
+                <div class="icon">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+
+                <h3>AI Chats</h3>
+
+                <p id="totalChats">0</p>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Tickets -->
+
+        <section class="recent">
+
+            <h2>Recent Tickets</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="recentTickets">
+
+                    <!-- Data will be loaded from Spring Boot -->
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
