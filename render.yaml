@@ -1,7 +1,7 @@
 services:
   - type: web
     name: careflow-backend
-    runtime: java
+    env: java
     rootDir: careflow-backend
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/*.jar
