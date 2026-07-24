@@ -29,3 +29,55 @@
 .card4 .icon{
     color:#8B5CF6;
 }
+
+/* ===== DARK MODE ===== */
+
+body.dark {
+    background: #0f172a;
+    color: #ffffff;
+}
+
+body.dark .container {
+    background: #0f172a;
+}
+
+body.dark .sidebar {
+    background: #1e293b;
+}
+
+body.dark .sidebar a {
+    color: #ffffff;
+}
+
+body.dark .sidebar li.active {
+    background: #334155;
+}
+
+body.dark .main {
+    background: #111827;
+}
+
+body.dark .card {
+    background: #1e293b;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark table {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+body.dark th {
+    background: #334155;
+    color: #ffffff;
+}
+
+body.dark td {
+    border-color: #475569;
+}
+
+body.dark #themeBtn {
+    background: #2563EB;
+    color: white;
+}
