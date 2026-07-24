@@ -19,7 +19,7 @@
     --background:#F1F5F9;
     --card:#FFFFFF;
     --text:#334155;
-    --shadow:0 12px 28px rgba(0,0,0,.08);
+    --shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 html,
@@ -41,7 +41,7 @@ body{
 /* Sidebar */
 
 .sidebar{
-    width:280px;
+    width:270px;
     min-height:100vh;
     background:var(--sidebar);
     color:#fff;
@@ -49,14 +49,14 @@ body{
     left:0;
     top:0;
     overflow-y:auto;
-    box-shadow:5px 0 20px rgba(0,0,0,.2);
+    box-shadow:5px 0 20px rgba(0,0,0,.18);
     transition:.3s;
 }
 
 .sidebar h2{
     text-align:center;
-    padding:32px 20px;
-    font-size:34px;
+    padding:30px 20px;
+    font-size:32px;
     font-weight:700;
 }
 
@@ -65,35 +65,35 @@ body{
 }
 
 .sidebar li{
-    margin:12px 15px;
-    border-radius:12px;
+    margin:10px 15px;
+    border-radius:10px;
     transition:.3s;
 }
 
 .sidebar li a{
     display:block;
-    padding:16px 18px;
+    padding:15px 18px;
     color:#fff;
     text-decoration:none;
-    font-size:17px;
+    font-size:16px;
 }
 
 .sidebar li i{
-    width:30px;
+    width:28px;
 }
 
 .sidebar li:hover,
 .sidebar li.active{
     background:var(--primary);
-    transform:translateX(6px);
+    transform:translateX(5px);
 }
 
 /* Main */
 
 .main{
-    margin-left:280px;
-    width:calc(100% - 280px);
-    padding:42px;
+    margin-left:270px;
+    width:calc(100% - 270px);
+    padding:38px;
     transition:.3s;
 }
 
@@ -103,11 +103,11 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:38px;
+    margin-bottom:34px;
 }
 
 header h1{
-    font-size:38px;
+    font-size:35px;
     font-weight:700;
 }
 
@@ -117,12 +117,12 @@ button{
     background:var(--primary);
     color:#fff;
     border:none;
-    padding:14px 28px;
+    padding:13px 24px;
     border-radius:30px;
     cursor:pointer;
-    font-size:16px;
+    font-size:15px;
     font-weight:600;
-    transition:all .3s ease;
+    transition:.3s;
 }
 
 button:hover{
@@ -130,18 +130,18 @@ button:hover{
     transform:translateY(-2px);
 }
 
-/* Cards */
+/* Dashboard Cards */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:28px;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
 }
 
 .card{
     background:var(--card);
-    padding:32px 28px;
-    min-height:190px;
+    padding:28px 26px;
+    min-height:180px;
     border-radius:18px;
     box-shadow:var(--shadow);
     text-align:center;
@@ -151,49 +151,49 @@ button:hover{
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
     background:#F8FAFC;
     border-color:#BFDBFE;
-    box-shadow:0 18px 38px rgba(37,99,235,.15);
+    box-shadow:0 15px 35px rgba(37,99,235,.12);
 }
 
 .card:active{
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 }
 
 .card h3{
-    margin:18px 0 12px;
-    font-size:20px;
+    margin:16px 0 10px;
+    font-size:19px;
     font-weight:600;
 }
 
 .card p{
-    font-size:38px;
+    font-size:34px;
     font-weight:700;
 }
 
 .icon{
-    font-size:50px;
+    font-size:46px;
     color:var(--primary);
     transition:transform .25s ease;
 }
 
 .card:hover .icon{
-    transform:scale(1.12);
+    transform:scale(1.10);
 }
 
-/* Recent */
+/* Recent Section */
 
 .recent{
-    margin-top:45px;
+    margin-top:40px;
 }
 
 .recent h2{
-    margin-bottom:22px;
-    font-size:28px;
+    margin-bottom:20px;
+    font-size:26px;
 }
 
-/* Table */
+/* Tables */
 
 table{
     width:100%;
@@ -207,12 +207,12 @@ table{
 th{
     background:var(--primary);
     color:#fff;
-    font-size:16px;
+    font-size:15px;
 }
 
 th,
 td{
-    padding:18px;
+    padding:16px;
     text-align:center;
 }
 
@@ -230,7 +230,7 @@ input,
 textarea,
 select{
     width:100%;
-    padding:14px;
+    padding:13px;
     border:1px solid #ddd;
     border-radius:10px;
     margin-bottom:15px;
@@ -294,9 +294,9 @@ body.dark .card{
 }
 
 body.dark .card:hover{
-    background:#334155;
+    background:#2A364A;
     border-color:#3B82F6;
-    box-shadow:0 18px 38px rgba(0,0,0,.35);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
 
 /* Responsive */
@@ -304,19 +304,19 @@ body.dark .card:hover{
 @media(max-width:768px){
 
     .sidebar{
-        width:240px;
+        width:230px;
     }
 
     .main{
-        margin-left:240px;
-        width:calc(100% - 240px);
-        padding:24px;
+        margin-left:230px;
+        width:calc(100% - 230px);
+        padding:22px;
     }
 
     header{
         flex-direction:column;
         align-items:flex-start;
-        gap:18px;
+        gap:15px;
     }
 
     .cards{
