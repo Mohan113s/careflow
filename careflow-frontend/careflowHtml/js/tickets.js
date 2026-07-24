@@ -158,6 +158,8 @@ function searchTicket() {
 
 /* STATUS */
 
+/* STATUS */
+
 async function loadStatus() {
 
     const container = document.getElementById("statusContainer");
@@ -166,47 +168,106 @@ async function loadStatus() {
 
     container.innerHTML = "";
 
-    const response = await fetch(API_URL);
+    try {
 
-    const tickets = await response.json();
+        const response = await fetch(API_URL);
 
-    tickets.forEach(ticket => {
+        const tickets = await response.json();
 
-        let width = 40;
 
-        if (ticket.status === "In Progress") width = 70;
+        tickets.forEach(ticket => {
 
-        if (ticket.status === "Resolved") width = 100;
 
-        container.innerHTML += `
+            let statusClass = "";
 
-        <div class="ticket-card">
+            if(ticket.status === "Open"){
+                statusClass = "open";
+            }
+            else if(ticket.status === "In Progress"){
+                statusClass = "progress";
+            }
+            else if(ticket.status === "Resolved"){
+                statusClass = "closed";
+            }
 
-            <h3>${ticket.title}</h3>
 
-            <p><b>Ticket ID:</b> ${ticket.id}</p>
 
-            <p><b>Status:</b> ${ticket.status}</p>
+            container.innerHTML += `
 
-            <p class="agent">Assigned Agent : Sarah Johnson</p>
 
-            <p class="ai-score">AI Confidence : 92%</p>
+            <div class="status-card">
 
-            <div class="progress">
 
-                <div class="progress-bar"
+                <div class="status-header">
 
-                style="width:${width}%">
+
+                    <h3>${ticket.title}</h3>
+
+
+                    <span class="status-badge ${statusClass}">
+                        ${ticket.status}
+                    </span>
+
 
                 </div>
 
+
+
+                <div class="ticket-id">
+
+                    Ticket ID : #${ticket.id}
+
+                </div>
+
+
+
+                <div class="status-details">
+
+
+                    <p>
+                    <i class="fa-solid fa-layer-group"></i>
+                    Category : ${ticket.category}
+                    </p>
+
+
+
+                    <p>
+                    <i class="fa-solid fa-flag"></i>
+                    Priority : ${ticket.priority}
+                    </p>
+
+
+
+                    <p>
+                    <i class="fa-solid fa-user"></i>
+                    Assigned Agent : Sarah Johnson
+                    </p>
+
+
+
+                    <p>
+                    <i class="fa-solid fa-robot"></i>
+                    AI Confidence : 92%
+                    </p>
+
+
+                </div>
+
+
             </div>
 
-        </div>
 
-        `;
+            `;
 
-    });
+
+        });
+
+
+    } catch(err){
+
+        console.error("Status Loading Error:",err);
+
+    }
 
 }
 

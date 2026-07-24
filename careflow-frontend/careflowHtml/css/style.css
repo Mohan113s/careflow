@@ -607,3 +607,105 @@ body.dark .card:hover{
 
 
 }
+/* ============================= */
+/* TICKET STATUS PAGE */
+/* ============================= */
+
+#statusContainer{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+    margin-top:20px;
+}
+
+
+.status-card{
+    background:var(--card);
+    border-radius:16px;
+    padding:22px;
+    border:1px solid #E2E8F0;
+    box-shadow:var(--shadow);
+    transition:.3s ease;
+}
+
+
+.status-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.08);
+}
+
+
+.status-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+
+.status-header h3{
+    font-size:18px;
+    color:#1E3A8A;
+}
+
+
+.ticket-id{
+    font-size:13px;
+    color:#64748B;
+}
+
+
+.status-badge{
+
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+
+/* Status Colors */
+
+.open{
+    background:#DBEAFE;
+    color:#1D4ED8;
+}
+
+
+.progress{
+    background:#FEF3C7;
+    color:#B45309;
+}
+
+
+.closed{
+    background:#DCFCE7;
+    color:#15803D;
+}
+
+
+.status-details{
+
+    margin-top:15px;
+    color:#475569;
+    font-size:14px;
+    line-height:1.6;
+
+}
+
+
+body.dark .status-card{
+    background:#1E293B;
+    border-color:#334155;
+}
+
+
+body.dark .status-header h3{
+    color:#93C5FD;
+}
+
+
+body.dark .status-details{
+    color:#CBD5E1;
+}
