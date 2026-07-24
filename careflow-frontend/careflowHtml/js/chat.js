@@ -27,7 +27,7 @@ async function sendMessage() {
 
     try {
 
-        const response = await fetch("http://localhost:8081/api/chat", {
+        const response = await fetch("https://careflow-h34p.onrender.com/api/chat", {
 
             method: "POST",
 

@@ -15,10 +15,8 @@ button.addEventListener("click", function () {
     }
 
 });
-
-fetch("http://localhost:8081/dashboard")
-
-.then(res=>res.json())
+fetch("https://careflow-h34p.onrender.com/dashboard")
+.then(res => res.json())
 
 .then(data=>{
 

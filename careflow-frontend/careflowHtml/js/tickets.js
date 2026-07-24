@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8081/tickets";
+const API_URL = "https://careflow-h34p.onrender.com/tickets";
 
 /* CREATE TICKET */
 
