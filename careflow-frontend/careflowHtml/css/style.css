@@ -9,335 +9,601 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
+
 :root{
+
     --primary:#2563EB;
     --secondary:#1E40AF;
     --success:#22C55E;
     --warning:#F59E0B;
     --danger:#EF4444;
+
     --sidebar:#0F172A;
     --background:#F1F5F9;
     --card:#FFFFFF;
     --text:#334155;
-    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+    --shadow:0 6px 18px rgba(0,0,0,.08);
+
 }
+
 
 html,
 body{
+
     width:100%;
     min-height:100%;
+
     background:var(--background);
     color:var(--text);
+
     transition:.3s;
+
 }
 
-/* Layout */
+
+/* ============================= */
+/* LAYOUT */
+/* ============================= */
+
 
 .container{
+
     display:flex;
     min-height:100vh;
+
 }
 
-/* Sidebar */
+
+
+/* ============================= */
+/* SIDEBAR */
+/* ============================= */
+
 
 .sidebar{
-    width:270px;
+
+    width:240px;
     min-height:100vh;
+
     background:var(--sidebar);
-    color:#fff;
+    color:white;
+
     position:fixed;
+
     left:0;
     top:0;
-    overflow-y:auto;
-    box-shadow:5px 0 20px rgba(0,0,0,.18);
-    transition:.3s;
+
+    box-shadow:3px 0 15px rgba(0,0,0,.18);
+
 }
+
+
 
 .sidebar h2{
+
     text-align:center;
-    padding:30px 20px;
-    font-size:32px;
-    font-weight:700;
+
+    padding:25px 15px;
+
+    font-size:28px;
+
 }
+
+
 
 .sidebar ul{
+
     list-style:none;
+
 }
+
+
 
 .sidebar li{
-    margin:10px 15px;
-    border-radius:10px;
+
+    margin:8px 12px;
+
+    border-radius:8px;
+
     transition:.3s;
+
 }
+
+
 
 .sidebar li a{
-    display:block;
-    padding:15px 18px;
-    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:13px 15px;
+
+    color:white;
+
     text-decoration:none;
-    font-size:16px;
+
+    font-size:15px;
+
 }
 
+
+
 .sidebar li i{
-    width:28px;
+
+    width:20px;
+
 }
+
+
 
 .sidebar li:hover,
 .sidebar li.active{
+
     background:var(--primary);
-    transform:translateX(5px);
+
+    transform:translateX(3px);
+
 }
 
-/* Main */
+
+
+/* ============================= */
+/* MAIN */
+/* ============================= */
+
 
 .main{
-    margin-left:270px;
-    width:calc(100% - 270px);
-    padding:38px;
-    transition:.3s;
+
+    margin-left:240px;
+
+    width:calc(100% - 240px);
+
+    padding:28px;
+
 }
 
-/* Header */
+
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
 
 header{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    margin-bottom:34px;
+
+    margin-bottom:25px;
+
 }
+
+
 
 header h1{
-    font-size:35px;
+
+    font-size:30px;
+
     font-weight:700;
+
 }
 
-/* Button */
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
 
 button{
+
     background:var(--primary);
-    color:#fff;
+
+    color:white;
+
     border:none;
-    padding:13px 24px;
-    border-radius:30px;
+
+    padding:10px 20px;
+
+    border-radius:25px;
+
     cursor:pointer;
-    font-size:15px;
+
+    font-size:14px;
+
     font-weight:600;
+
     transition:.3s;
+
 }
+
+
 
 button:hover{
+
     background:var(--secondary);
-    transform:translateY(-2px);
+
 }
 
-/* Dashboard Cards */
+
+
+/* ============================= */
+/* DASHBOARD CARDS */
+/* ============================= */
+
 
 .cards{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:24px;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(210px,1fr));
+
+    gap:20px;
+
 }
+
+
 
 .card{
+
     background:var(--card);
-    padding:28px 26px;
-    min-height:180px;
-    border-radius:18px;
+
+    padding:22px;
+
+    min-height:155px;
+
+    border-radius:14px;
+
     box-shadow:var(--shadow);
+
     text-align:center;
+
     cursor:pointer;
+
     border:1px solid transparent;
-    transition:all .3s ease;
+
+    transition:.3s;
+
 }
+
+
 
 .card:hover{
-    transform:translateY(-6px);
-    background:#F8FAFC;
+
+    transform:translateY(-5px);
+
     border-color:#BFDBFE;
-    box-shadow:0 15px 35px rgba(37,99,235,.12);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.15);
+
 }
 
-.card:active{
-    transform:translateY(-2px);
-}
+
 
 .card h3{
-    margin:16px 0 10px;
-    font-size:19px;
-    font-weight:600;
+
+    margin:12px 0 8px;
+
+    font-size:17px;
+
 }
+
+
 
 .card p{
-    font-size:34px;
+
+    font-size:30px;
+
     font-weight:700;
+
 }
+
+
 
 .icon{
-    font-size:46px;
+
+    font-size:38px;
+
     color:var(--primary);
-    transition:transform .25s ease;
+
+    transition:.3s;
+
 }
+
+
 
 .card:hover .icon{
-    transform:scale(1.10);
+
+    transform:scale(1.08);
+
 }
 
-/* Recent Section */
+
+
+/* ============================= */
+/* TABLE */
+/* ============================= */
+
 
 .recent{
-    margin-top:40px;
+
+    margin-top:30px;
+
 }
+
+
 
 .recent h2{
-    margin-bottom:20px;
-    font-size:26px;
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
 }
 
-/* Tables */
+
 
 table{
+
     width:100%;
+
     border-collapse:collapse;
-    background:#fff;
-    border-radius:16px;
+
+    background:white;
+
+    border-radius:12px;
+
     overflow:hidden;
+
     box-shadow:var(--shadow);
+
 }
 
+
+
 th{
+
     background:var(--primary);
-    color:#fff;
-    font-size:15px;
+
+    color:white;
+
+    font-size:14px;
+
 }
+
+
 
 th,
 td{
-    padding:16px;
+
+    padding:12px;
+
     text-align:center;
+
+    font-size:14px;
+
 }
+
+
 
 tbody tr:nth-child(even){
+
     background:#F8FAFC;
+
 }
+
+
 
 tbody tr:hover{
+
     background:#DBEAFE;
+
 }
 
-/* Forms */
+
+
+/* ============================= */
+/* FORMS */
+/* ============================= */
+
 
 input,
 textarea,
 select{
+
     width:100%;
-    padding:13px;
+
+    padding:11px;
+
     border:1px solid #ddd;
-    border-radius:10px;
-    margin-bottom:15px;
-    font-size:15px;
-    outline:none;
+
+    border-radius:8px;
+
+    margin-bottom:12px;
+
+    font-size:14px;
+
 }
+
+
 
 input:focus,
 textarea:focus,
 select:focus{
+
+    outline:none;
+
     border-color:var(--primary);
+
 }
 
-/* Scrollbar */
 
-::-webkit-scrollbar{
-    width:8px;
-}
 
-::-webkit-scrollbar-thumb{
-    background:var(--primary);
-    border-radius:10px;
-}
+/* ============================= */
+/* DARK MODE */
+/* ============================= */
 
-/* Dark Mode */
 
 body.dark{
+
     --background:#0F172A;
+
     --card:#1E293B;
+
     --text:#F8FAFC;
+
     --sidebar:#020617;
+
 }
+
+
 
 body.dark table{
+
     background:var(--card);
-    color:var(--text);
+
+    color:white;
+
 }
+
+
 
 body.dark tbody tr:nth-child(even){
+
     background:#334155;
+
 }
+
+
 
 body.dark tbody tr:hover{
+
     background:#475569;
+
 }
 
-body.dark th{
-    background:#2563EB;
-}
+
 
 body.dark input,
 body.dark textarea,
 body.dark select{
+
     background:#334155;
-    color:#fff;
-    border:1px solid #64748B;
+
+    color:white;
+
+    border-color:#64748B;
+
 }
 
-body.dark .card{
-    border:1px solid transparent;
-}
+
 
 body.dark .card:hover{
-    background:#2A364A;
-    border-color:#3B82F6;
-    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    background:#273449;
+
 }
 
-/* Responsive */
+
+
+/* ============================= */
+/* SCROLLBAR */
+/* ============================= */
+
+
+::-webkit-scrollbar{
+
+    width:7px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+
+}
+
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
 
 @media(max-width:768px){
 
-    .sidebar{
-        width:230px;
-    }
 
-    .main{
-        margin-left:230px;
-        width:calc(100% - 230px);
-        padding:22px;
-    }
+.sidebar{
 
-    header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:15px;
-    }
+    width:210px;
 
-    .cards{
-        grid-template-columns:1fr;
-    }
 }
+
+
+.main{
+
+    margin-left:210px;
+
+    width:calc(100% - 210px);
+
+    padding:20px;
+
+}
+
+
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+}
+
+
 
 @media(max-width:600px){
 
-    .sidebar{
-        position:relative;
-        width:100%;
-        min-height:auto;
-    }
 
-    .main{
-        margin-left:0;
-        width:100%;
-    }
+.sidebar{
 
-    .container{
-        flex-direction:column;
-    }
+    position:relative;
+
+    width:100%;
+
+}
+
+
+
+.main{
+
+    margin-left:0;
+
+    width:100%;
+
+}
+
+
+
+.container{
+
+    flex-direction:column;
+
+}
+
+
 }
